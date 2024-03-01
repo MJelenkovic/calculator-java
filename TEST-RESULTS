@@ -1,0 +1,34 @@
+Zadatak : Testiranje	
+	
+Java Program:	Calculator
+metoda testiranja:	Black box - Crna kutija
+	
+	             rezultat
+1. Sabiranje	tačan
+2. Oduzimanje	tačan
+3 Operacije sa negativnim brojevima	tačan
+3.Deljenje nulom	ne  dozvoljava, izbacuje grešku
+4. slova umesto broja	izbacuje grešku
+5. operacije decimalnim brojevima	tačan
+	
+Unit test	
+@Test	
+   public void testRun_Mnozenje() {	
+       String expression = "5*3";	
+       String result = Calculator.Run(expression);	
+       assertEquals("15", result);	
+   }	
+	
+   @Test	
+   public void testRun_Deljenje() {	
+       String expression = "6/2";	
+       String result = Calculator.Run(expression);	
+       assertEquals("3", result);	
+   }	
+	
+   @Test	
+   public void testRun_SabiranjeOduzimanje() {	
+       String expression = "8+2-4";	
+       String result = Calculator.Run(expression);	
+       assertEquals("6", result);	
+   }	
